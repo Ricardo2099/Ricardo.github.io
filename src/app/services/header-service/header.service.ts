@@ -4,6 +4,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class HeaderService {
+  accesoHeader: string = 'Valor inicial desde HeaderService';
 
-  constructor() { }
+  constructor() {
+    console.log('HeaderService constructor');
+  }
 }
