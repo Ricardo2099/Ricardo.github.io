@@ -1,1 +1,18 @@
-<p>work-experience works!</p>
+<table border="1">
+  <tr *ngIf="experiences && experiences.length > 0">
+    <td>
+      <strong>{{ experiences[0].position }}</strong><br>
+      {{ experiences[0].company }}
+    </td>
+    <td>
+      <strong>Logro:</strong> {{ experiences[0].accomplishment }}<br>
+      <strong>Periodo:</strong> {{ experiences[0].startDate }} - {{ experiences[0].endDate }}<br>
+      <strong>Ubicación:</strong> {{ experiences[0].location }}
+    </td>
+  </tr>
+  <tr *ngIf="!experiences || experiences.length === 0">
+    <td colspan="2">
+      Cargando experiencias laborales...
+    </td>
+  </tr>
+</table>
