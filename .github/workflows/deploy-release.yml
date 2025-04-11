@@ -48,3 +48,8 @@ jobs:
           git add docs
           git commit -m "${{ env.CI_COMMIT_MESSAGE }}" || echo "No changes to commit"
           git push
+
+- name: Run Unit Tests
+  run: |
+    npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+
