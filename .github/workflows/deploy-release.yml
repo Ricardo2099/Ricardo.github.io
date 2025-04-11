@@ -4,7 +4,7 @@ on:
   push:
     branches: ["deploy-release"]
   pull_request:
-    branches: ["deploy-release"]
+    branches: ["release"]
 
 permissions:
   contents: write
