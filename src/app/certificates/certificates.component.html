@@ -1,1 +1,15 @@
-<p>certificates works!</p>
+<div class="section-title">Certificados</div>
+
+<div *ngIf="certificates && certificates.length > 0; else loading" class="certificates-container">
+  <div *ngFor="let certificate of certificates" class="certificate-block">
+    <p><strong>📜 Certificación:</strong> {{ certificate.certificacion }}</p>
+    <p><strong>📅 Fecha de Obtención:</strong> {{ certificate.fechaObtencion }}</p>
+    <p><strong>🏫 Institución:</strong> {{ certificate.institucion }}</p>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="loading-section">
+    <p>Cargando certificados...</p>
+  </div>
+</ng-template>

@@ -1,1 +1,15 @@
-<p>languages works!</p>
+<div class="section-title">Idiomas</div>
+
+<div *ngIf="languages && languages.length > 0; else loading" class="languages-container">
+  <div *ngFor="let lang of languages" class="language-block">
+    <p><strong>🌍 Idioma:</strong> {{ lang.idioma }}</p>
+    <p><strong>📈 Nivel de Competencia:</strong> {{ lang.nivelDeCompetencia }}</p>
+    <p><strong>📜 Certificaciones o Pruebas:</strong> {{ lang.certificacionesOPruebasdeIdioma }}</p>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="loading-section">
+    <p>Cargando información de idiomas...</p>
+  </div>
+</ng-template>

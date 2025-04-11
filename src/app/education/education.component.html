@@ -1,1 +1,18 @@
-<p>education works!</p>
+<div class="section-title">Educación</div>
+
+<div *ngIf="educationList && educationList.length > 0; else loading" class="education-container">
+  <div *ngFor="let edu of educationList" class="education-block">
+    <p><strong>🎓 Grado Académico:</strong> {{ edu.gradoAcademico }}</p>
+    <p><strong>🏫 Institución:</strong> {{ edu.institucion }}</p>
+    <p><strong>📚 Cursos Relevantes:</strong> {{ edu.cursoRelevantes }}</p>
+    <p><strong>🏅 Premios y Reconocimientos:</strong> {{ edu.premiosReconocimientos }}</p>
+    <p><strong>📈 Promedio:</strong> {{ edu.promedio }}</p>
+    <p><strong>🧪 Proyectos Académicos:</strong> {{ edu.proyectosAcademicos }}</p>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="loading-section">
+    <p>Cargando datos de Educación...</p>
+  </div>
+</ng-template>

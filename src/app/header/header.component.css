@@ -1,0 +1,47 @@
+/* Contenedor del header */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Texto y datos del usuario */
+.header-info {
+  flex: 1;
+}
+
+.header-info h2 {
+  margin-top: 0;
+  color: #2c3e50;
+  font-size: 28px;
+}
+
+.header-info p {
+  margin: 6px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Imagen de perfil */
+.header-image {
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.header-image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #3498db;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo para el mensaje de carga */
+.loading-header {
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+}

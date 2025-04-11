@@ -1,1 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+/* Fondo general y centrado */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* Contenedor del CV */
+.cv-container {
+  background-color: #ffffff;
+  border: 5px solid #3498db;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-top: 40px;
+  max-width: 1000px;
+  width: 95%;
+}
+
+/* Tabla del CV */
+.cv-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+/* Celdas */
+.cv-table td {
+  vertical-align: top;
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+
+/* Responsive (en pantallas pequeñas) */
+@media (max-width: 768px) {
+  .cv-table, .cv-table tr, .cv-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .cv-table td {
+    border: none;
+    border-bottom: 1px solid #ccc;
+  }
+}
