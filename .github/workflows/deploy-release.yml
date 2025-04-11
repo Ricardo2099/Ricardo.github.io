@@ -24,6 +24,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Run Unit Tests
+        run: |
+          npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+
       - name: Build Angular app
         run: npm run build --configuration production
 
@@ -49,7 +53,4 @@ jobs:
           git commit -m "${{ env.CI_COMMIT_MESSAGE }}" || echo "No changes to commit"
           git push
 
-- name: Run Unit Tests
-  run: |
-    npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
 
