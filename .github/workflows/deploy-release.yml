@@ -31,7 +31,6 @@ jobs:
       - name: Build Angular app
         run: npm run build --configuration production
 
-
       - name: List output folder
         run: ls -la dist/mycv/browser
 
@@ -45,13 +44,13 @@ jobs:
 
       - name: Git commit and push docs
         env:
-         CI_COMMIT_MESSAGE: deploy my cv to github pages
-         CI_COMMIT_AUTHOR: Ricardo2099
-         run: |
+          CI_COMMIT_MESSAGE: deploy my cv to github pages
+          CI_COMMIT_AUTHOR: Ricardo2099
+        run: |
           git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
           git config --global user.email "rojasricardo104@gmail.com"
           git add docs
           git commit -m "${{ env.CI_COMMIT_MESSAGE }}" || echo "No changes to commit"
           git push
 
-
+    
