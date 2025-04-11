@@ -1,1 +1,14 @@
-<p>skills works!</p>
+<div class="section-title">Habilidades</div>
+
+<div *ngIf="skills && skills.length > 0; else loading" class="skills-container">
+  <div *ngFor="let skill of skills" class="skill-block">
+    <p><strong>🧠 Programación:</strong> {{ skill.skillsPrograming }}</p>
+    <p><strong>🤝 Habilidades Sociales:</strong> {{ skill.socialSkills }}</p>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="loading-section">
+    <p>Cargando datos de skills...</p>
+  </div>
+</ng-template>

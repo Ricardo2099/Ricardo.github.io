@@ -1,19 +1,20 @@
-<tr *ngIf="header">
-  <td>
-    {{ header.name }} <br>
-    {{ header.goalLife }}
-  </td>
-  <td>
-    <img [src]="header.photoUrl" width="200" height="200" />
-    <br>
-    {{ header.email }}<br>
-    {{ header.phoneNumber }}<br>
-    {{ header.location }}<br>
-    {{ header.socialNetwork }}
-  </td>
-</tr>
-<tr *ngIf="!header">
-  <td colspan="2">
-    Cargando datos del header...
-  </td>
-</tr>
+<div *ngIf="header; else loading" class="header-container">
+  <div class="header-info">
+    <h2>{{ header.name }}</h2>
+    <p>{{ header.goalLife }}</p>
+    <p><strong>Email:</strong> {{ header.email }}</p>
+    <p><strong>Teléfono:</strong> {{ header.phoneNumber }}</p>
+    <p><strong>Ubicación:</strong> {{ header.location }}</p>
+    <p><strong>Redes Sociales:</strong> {{ header.socialNetwork }}</p>
+  </div>
+
+  <div class="header-image">
+    <img [src]="header.photoUrl" alt="Foto de perfil" />
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="loading-header">
+    <p>Cargando datos del header...</p>
+  </div>
+</ng-template>

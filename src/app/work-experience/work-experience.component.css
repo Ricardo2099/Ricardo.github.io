@@ -1,0 +1,35 @@
+.work-experience-container {
+  padding: 10px;
+}
+
+.experience-card {
+  border-left: 6px solid #2ecc71;
+  background-color: #fdfdfd;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+.experience-header h3 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 22px;
+}
+
+.experience-header span {
+  color: #7f8c8d;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.experience-details p {
+  margin: 8px 0;
+  color: #333;
+}
+
+.loading-section {
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+}

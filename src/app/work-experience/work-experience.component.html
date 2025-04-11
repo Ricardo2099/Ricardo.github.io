@@ -1,18 +1,21 @@
-<table border="1">
-  <tr *ngIf="experiences && experiences.length > 0">
-    <td>
-      <strong>{{ experiences[0].position }}</strong><br>
-      {{ experiences[0].company }}
-    </td>
-    <td>
-      <strong>Logro:</strong> {{ experiences[0].accomplishment }}<br>
-      <strong>Periodo:</strong> {{ experiences[0].startDate }} - {{ experiences[0].endDate }}<br>
-      <strong>Ubicación:</strong> {{ experiences[0].location }}
-    </td>
-  </tr>
-  <tr *ngIf="!experiences || experiences.length === 0">
-    <td colspan="2">
-      Cargando experiencias laborales...
-    </td>
-  </tr>
-</table>
+<div class="section-title">Experiencia Laboral</div>
+
+<div *ngIf="experiences && experiences.length > 0; else loading" class="work-experience-container">
+  <div class="experience-card">
+    <div class="experience-header">
+      <h3>{{ experiences[0].position }}</h3>
+      <span>{{ experiences[0].company }}</span>
+    </div>
+    <div class="experience-details">
+      <p><strong>Logro:</strong> {{ experiences[0].accomplishment }}</p>
+      <p><strong>Periodo:</strong> {{ experiences[0].startDate }} - {{ experiences[0].endDate }}</p>
+      <p><strong>Ubicación:</strong> {{ experiences[0].location }}</p>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="loading-section">
+    <p>Cargando experiencias laborales...</p>
+  </div>
+</ng-template>
