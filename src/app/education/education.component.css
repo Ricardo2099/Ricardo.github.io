@@ -1,0 +1,20 @@
+.certificates-container,
+.education-container {
+  padding: 10px;
+}
+
+.certificate-block,
+.education-block {
+  background-color: #f8f9fa;
+  border-left: 5px solid #e67e22;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.certificate-block p,
+.education-block p {
+  margin: 6px 0;
+  color: #2c3e50;
+  font-size: 15px;
+}

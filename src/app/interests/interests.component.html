@@ -1,0 +1,17 @@
+<div class="section-title">Intereses</div>
+
+<div *ngIf="interests && interests.length > 0; else loading" class="interests-container">
+  <div *ngFor="let interest of interests" class="interest-block">
+    <p><strong>🎯 Actividades Extracurriculares:</strong> {{ interest.actividadesExtracurriculares }}</p>
+    <p><strong>🎭 Cultura y Eventos:</strong> {{ interest.culturaYEventos }}</p>
+    <p><strong>⚽ Deportes:</strong> {{ interest.deportes }}</p>
+    <p><strong>🎨 Hobbies y Actividades:</strong> {{ interest.hobbiesYActividades }}</p>
+    <p><strong>💼 Intereses Profesionales:</strong> {{ interest.interesesProfesionales }}</p>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="loading-section">
+    <p>Cargando datos de intereses...</p>
+  </div>
+</ng-template>
